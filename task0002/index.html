@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-            <link href="css/index.css" rel="stylesheet">
-                <title>
-                    华中科技大学创客空间
-                </title>
-            </link>
-        </meta>
-    </head>
-    <body>
-    
-       
-            <div class="sign-in">
-                <h1>
-                    Sign In
-                </h1>
-                <p>Don't have a hust account?<a href="" class="creat">creat a free account</a></p>
-                <label>
-                    Email
-                </label>
-                <input type="text" class="email"></input>
-                <label>
-                    Password
-                </label>
-                <input type="password"></input>
-                <a href="" class="forget">forgot your password?</a>
-                <button id="enter">Sign In</button>
-                <ul>
-                	<li class="item">Sign in with : </li>
-                	<li class="item-icon"><img src="image/github.png" alt=""></li>
-                	<li class="item-icon"><img src="image/qq.png" alt=""></li>
-                	<li class="item-icon"><img src="image/sina.png" alt=""></li>
-                <footer>© 2016 hust <a href=""> privacy policy</a></footer>
-            </div>
-        
-    </body>
-    <script>
-    	var bg=document.getElementById("enter");
-    	bg.onclick=function(){
-    		alert("not available to sign in");
-    	}
-    </script>
+<head>
+	<meta charset="UTF-8">
+	<menta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+	<link rel="stylesheet" href="css/index.css">
+	<title>change</title>
+</head>
+<body>
+	<div id="bc">
+		<img src="images/bawei.png" alt="" id="img">
+		<button id="xin">小新</button>
+		<button id="bawei">巴卫</button>
+	</div>
+	<script>
+		var btn=document.getElementsByTagName('button');
+		var img=document.getElementById("img");
+		var div=document.getElementById("bc");
+		for(var i=0;i<btn.length;i++){
+			btn[i].onclick=function(){
+				img.setAttribute("src","images/"+this.id+".png");
+				div.style.backgroundImage='url('+"images/"+div.id+"-"+this.id+".png"+')';
+				//判断按钮的背景色是否和div的背景色个格式一致，如果不是，交换两个按钮的背景和字体颜色
+				if(document.defaultView.getComputedStyle(this,null).backgroundImage!=document.defaultView.getComputedStyle(bc,null).backgroundImage-'.png'+'-btn.png')
+				ExchangeCss(btn[0],btn[1]);
+				}
+		function ExchangeCss(btn1,btn2){
+			var bt1Style=document.defaultView.getComputedStyle(btn1,null);
+			var bt2Style=document.defaultView.getComputedStyle(btn2,null);
+			var middle=bt1Style.color;
+			btn1.style.color=bt2Style.color;
+			btn2.style.color=middle;
+			var midBI=bt1Style.backgroundImage;
+			btn1.style.backgroundImage=bt2Style.backgroundImage;
+			btn2.style.backgroundImage=midBI;
+		}
+	}
+	</script>
+</body>
 </html>

@@ -1,121 +1,123 @@
-/*初始化所有元素的外边距和内边距为0；*/
-/*令所有块级元素的宽度包含内边距和外边距*/
-/*初始化所有字体为微软雅黑*/
+/*初始化所有的外边距和内边距为0，设置默认字体为微软雅黑*/
 *{
-	margin: 0px;
 	padding: 0px;
-	-webkit-box-sizing: border-box;
-	font-family: Microsoft YaHei;
+	margin: 0px;
+	font-family: microsoft YaHei;
 }
-html{
-	background-color: #f6f8f8;
-	overflow: hidden;
-}
-body{
-	overflow: hidden;
-	background-image: url(../image/mt.jpg);
+@media screen and (min-width:1000px ){
+/*main部分设置背景图*/
+div{
+	background-image: url('../images/bc-bawei.png');
 	background-size: cover;
-	height: 1000px;
+/*设置main的宽度和高度使图片铺满整个页面*/
+    width: 100%;
+    height: 1000px;
+ }
+ /*设置图片的位置以及尺寸*/
+ img{
+ 	margin-left: 100px;
+ 	margin-top: 200px;
+ 	width: 366px;
+ 	height: 439px;
+ }
+ /*设置按钮的位置，尺寸和形状*/
+ button{
+ 	/*绝对定位右边界350px*/
+ 	position: absolute;
+ 	right: 16%;
+ 	/*宽度为300px，高度为50px*/
+ 	width: 300px;
+ 	height: 50px;
+ 	border-radius: 3px;
+ 	/*取消边界*/
+ 	border: none;
+ 	/*文字向左对齐*/
+ 	text-align: left;
+ 	/*设置内边距，以排版按钮文字*/
+ 	padding-left: 20px;
+ 	/*设置文字大小*/
+ 	font-size: 22px;
+ }
+#xin{
+ 	/*绝对定位，离上边界315px*/
+ 	top: 315px;
+ 	/*设置背景图*/
+ 	background-image: url('../images/bc-xin-btn.png');
+ 	background-size: cover;
+ 	/*设置内边距，以排版按钮文字*/
+ 	padding-left: 20px;
+ 	/*设置文字大小颜色*/
+ 	color: #98d1dd;
+ }
+ #bawei{
+ 	/*绝对定位，离上边界490px*/
+ 	top: 490px;
+ 	/*设置背景图*/
+ 	background-image: url('../images/bc-bawei-btn.png');
+ 	background-size: cover;
+ 	/*设置字体颜色*/
+ 	color: black;
+ }
 }
-div.sign-in{
-	width: 25%;
-	min-width: 380px;
-	position: absolute;
-	right: 10%;
-	background-color: #f6f8f8;
-	margin-top: 100px;
-	overflow: hidden;
-	border: 1px solid white;
-	border-radius: 10px;
-	padding: 80px 40px;
-}
-div.sign-in h1{
-	font-family: Open Sans;
-	font-weight: 700;
-	font-size: 200%;
-	color: #575a5b;
-	line-height: 1.4;
-}
-div.sign-in p{
-	color: #aebdc1;
-	margin-bottom: 17px;
-}
-a.creat{
-	color: #21abc7;
-	font-weight: bold;
-}
-div.sign-in label{
-	display: block;
-	font-size: 85%;
-	font-weight: 600;
-	margin-bottom: 4.25px;
-}
-div.sign-in input{
-	display: block;
-	width: 100%;
-	height: 44px;
-	padding: 10px;
-	font-size: 1em;
-	border: 1px solid rgb(174, 189, 193);
-	border-radius: 2px;
-}
-input.email{
-	margin-bottom: 20px;
-}
-a.forget{
-	display: block;
-	color: #1C91A8;
-	cursor: auto;
-	font-size: 12px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-div.sign-in button{
-	position: absolute;
-	left: 50%;
-	margin-left: -150px;
-	width: 300px;
-	padding: 0 40px;
-	border-radius: 100px;
-	height: 45px;
-	border: 1px solid #21abc7;
-	background-color: #21abc7;
-	color: white;
-	line-height: 2.7;
-	font-size: 100%;
-	font-weight: 600;
-	text-align: center;
-	margin-bottom: 20px;
-}
-#enter:hover{
-	background-color: #167385;
-}
-ul{
-	text-align: center;
-}
-ul li{
-	display: inline-block;
-	margin-right: 10px;
-	vertical-align: middle;
-}
-li.item{
-	color: #aebdc1;
-	font-size: 80%;
-	font-weight: 600;
-}
-ul img{
-	width: 25px;
-}
-footer{
-	margin-top: 80px;
-	font-size: 12px;
-	font-weight: 300;
-	color: #aebdc1;
-	text-transform:capitalize;
-	text-align: center;
-}
-footer a{
-	margin-left: 10px;
-	color: #21abc7;
-	font-weight: bold;
+
+
+/*当屏幕宽度小于1000px时*/
+
+
+@media screen and (max-width: 1000px){
+/*main部分设置背景图*/
+div{
+	background-image: url('../images/bc-bawei.png');
+	background-size: cover;
+/*设置main的宽度和高度使图片铺满整个页面*/
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+ }
+ body{
+ 	min-width: 400px;
+ }
+ /* 设置图片的位置以及尺寸 */
+ img{
+ 	display: block;
+ 	/* 图片居中 */
+ 	margin: 100px auto;
+ 	/* 设置宽度和长度 */
+ 	width: 366px;
+ 	height: 439px;
+ }
+ /*设置按钮的位置，尺寸和形状*/
+ button{
+ 	/*设置按钮位置居中*/
+ 	margin: 0 auto;
+ 	/*设置尺寸*/
+ 	width: 300px;
+ 	height: 50px;
+ 	border-radius: 3px;
+ 	/*取消边界*/
+ 	border: none;
+ 	/*文字向左对齐*/
+ 	text-align: left;
+ 	/*设置内边距，以排版按钮文字*/
+ 	padding-left: 20px;
+ 	/*设置文字大小*/
+ 	font-size: 22px;
+ 	display: block;
+ }
+#xin{
+ 	margin-top: 100px;
+ 	/*设置背景图*/
+ 	background-image: url('../images/bc-xin-btn.png');
+ 	background-size: cover;
+ 	/*设置文字大小颜色*/
+ 	color: #98d1dd;
+ }
+ #bawei{
+ 	margin-top: 50px;
+ 	/*设置背景图*/
+ 	background-image: url('../images/bc-bawei-btn.png');
+ 	background-size: cover;
+ 	/*设置字体颜色*/
+ 	color: black;
+ }
 }
