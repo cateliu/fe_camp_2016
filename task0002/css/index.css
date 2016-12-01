@@ -1,0 +1,121 @@
+/*初始化所有元素的外边距和内边距为0；*/
+/*令所有块级元素的宽度包含内边距和外边距*/
+/*初始化所有字体为微软雅黑*/
+*{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	font-family: Microsoft YaHei;
+}
+html{
+	background-color: #f6f8f8;
+	overflow: hidden;
+}
+body{
+	overflow: hidden;
+	background-image: url(../image/mt.jpg);
+	background-size: cover;
+	height: 1000px;
+}
+div.sign-in{
+	width: 25%;
+	min-width: 380px;
+	position: absolute;
+	right: 10%;
+	background-color: #f6f8f8;
+	margin-top: 100px;
+	overflow: hidden;
+	border: 1px solid white;
+	border-radius: 10px;
+	padding: 80px 40px;
+}
+div.sign-in h1{
+	font-family: Open Sans;
+	font-weight: 700;
+	font-size: 200%;
+	color: #575a5b;
+	line-height: 1.4;
+}
+div.sign-in p{
+	color: #aebdc1;
+	margin-bottom: 17px;
+}
+a.creat{
+	color: #21abc7;
+	font-weight: bold;
+}
+div.sign-in label{
+	display: block;
+	font-size: 85%;
+	font-weight: 600;
+	margin-bottom: 4.25px;
+}
+div.sign-in input{
+	display: block;
+	width: 100%;
+	height: 44px;
+	padding: 10px;
+	font-size: 1em;
+	border: 1px solid rgb(174, 189, 193);
+	border-radius: 2px;
+}
+input.email{
+	margin-bottom: 20px;
+}
+a.forget{
+	display: block;
+	color: #1C91A8;
+	cursor: auto;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+div.sign-in button{
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	width: 300px;
+	padding: 0 40px;
+	border-radius: 100px;
+	height: 45px;
+	border: 1px solid #21abc7;
+	background-color: #21abc7;
+	color: white;
+	line-height: 2.7;
+	font-size: 100%;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 20px;
+}
+#enter:hover{
+	background-color: #167385;
+}
+ul{
+	text-align: center;
+}
+ul li{
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+li.item{
+	color: #aebdc1;
+	font-size: 80%;
+	font-weight: 600;
+}
+ul img{
+	width: 25px;
+}
+footer{
+	margin-top: 80px;
+	font-size: 12px;
+	font-weight: 300;
+	color: #aebdc1;
+	text-transform:capitalize;
+	text-align: center;
+}
+footer a{
+	margin-left: 10px;
+	color: #21abc7;
+	font-weight: bold;
+}
