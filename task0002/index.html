@@ -21,7 +21,9 @@
 				img.setAttribute("src","images/"+this.id+".png");
 				div.style.backgroundImage='url('+"images/"+div.id+"-"+this.id+".png"+')';
 				//判断按钮的背景色是否和div的背景色个格式一致，如果不是，交换两个按钮的背景和字体颜色
-				if(document.defaultView.getComputedStyle(this,null).backgroundImage!=document.defaultView.getComputedStyle(bc,null).backgroundImage-'.png'+'-btn.png')
+				var chan=document.defaultView.getComputedStyle(bc,null).backgroundImage;
+				chan=chan.substring(0,chan.length-6)+'-btn.png")';
+				if(document.defaultView.getComputedStyle(btn[0],null).backgroundImage!=chan)
 				ExchangeCss(btn[0],btn[1]);
 				}
 		function ExchangeCss(btn1,btn2){
