@@ -42,7 +42,7 @@ div{
  	/*绝对定位，离上边界315px*/
  	top: 315px;
  	/*设置背景图*/
- 	background-image: url('../images/bc-xin-btn.png');
+ 	background-image: url('../images/bc-bawei-btn.png');
  	background-size: cover;
  	/*设置内边距，以排版按钮文字*/
  	padding-left: 20px;
@@ -50,10 +50,11 @@ div{
  	color: #98d1dd;
  }
  #bawei{
+ 	
  	/*绝对定位，离上边界490px*/
  	top: 490px;
  	/*设置背景图*/
- 	background-image: url('../images/bc-bawei-btn.png');
+ 	background-image: url('../images/bc-xin-btn.png');
  	background-size: cover;
  	/*设置字体颜色*/
  	color: black;
@@ -107,15 +108,16 @@ div{
 #xin{
  	margin-top: 100px;
  	/*设置背景图*/
- 	background-image: url('../images/bc-xin-btn.png');
+ 	background-image: url('../images/bc-bawei-btn.png');
  	background-size: cover;
  	/*设置文字大小颜色*/
  	color: #98d1dd;
+ 	
  }
  #bawei{
  	margin-top: 50px;
  	/*设置背景图*/
- 	background-image: url('../images/bc-bawei-btn.png');
+ 	background-image: url('../images/bc-xin-btn.png');
  	background-size: cover;
  	/*设置字体颜色*/
  	color: black;
