@@ -1,0 +1,306 @@
+/* 初始化所有元素内边距和外边距为0，并设置字体为微软雅黑 */
+
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: Microsoft YaHei;
+}
+
+/* 头部元素始终固定在页面上方，并且显示，故设置fixed和z-index为最高，设置宽度为页面宽度 */
+
+.header{
+	position: fixed;
+	background-color: #fff;
+	width: 100%;
+	z-index: 999;
+}
+
+/* 这块区域使头部内容在页面压缩后左边仍留有空白，空白宽度为44px，同时设置内边距控制内元素高度 */
+
+.header-border{
+	height: 37px;
+	margin: 0 44px;
+	padding-top: 36px;
+	padding-bottom: 24px;
+	overflow: hidden;
+}
+
+/* 这块区域包含了头部元素的全部内容，可以说前面元素都是帮助定位。设置最小宽度为1124px，最大宽度1424px，margin居中，设置为弹性盒模型，子元素以第一个元素对齐 */
+
+.header-content{
+	min-width: 936px;
+	max-width: 1424px;
+	margin: 0 auto;
+	display: flex;
+	line-height: 20px;
+}
+
+/* 头部元素全部行内显示 */
+
+h1, nav,.nav li, .sub{
+	display: inline-block;
+}
+
+/* h1元素占一半 */
+
+h1{
+	flex: 4;
+}
+
+/* nav元素宽度占三分之一 */
+
+nav{
+	flex: 3;
+	margin-top: 14px;
+}
+
+/* sub的div元素宽度占六分之一 */
+
+.sub{
+	flex: 1;
+	margin-top: 14px;
+	margin-right: 6px;
+}
+
+/* 给页面定位左右边距均为6px */
+
+h1 img{
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+
+/* 导航列表的链接没有任何样式，宽度为58px。右边距为30px，颜色为灰色 */
+
+.nav li a{
+	display: block;
+	text-decoration: none;
+	font-size: 15.3px;
+	margin-right: 30px;
+	color: #bbb;
+	font-weight: 400;
+}
+
+/* 当鼠标移动到链接上方时，更改链接字体的颜色 */
+
+.nav li a:hover{
+	color: #222;
+}
+
+/* 设置sub中的链接浮动停靠在右边，没有文字装饰，同时设置底部边界的样式 */
+
+.sub a{
+	color: #bbb;
+	text-decoration: none;
+	float: right;
+	border-bottom: 1px solid #bbb;
+
+}
+
+/* 当鼠标移动到链接上方时，更改链接字体的颜色 */
+
+.sub a:hover{
+	border-bottom: 1px solid #222;
+	color: #222;
+}
+
+
+/* 设置main元素的位置，顶部外边距为95px，左右内边距为44px */
+
+main{
+	padding-top: 97px;
+	background-color: rgb(248, 248, 248);
+}
+
+/* 设置main的div元素的左右边距为44px，以便控制内容的定位 */
+
+.main-border{
+	margin: 0 44px;
+	padding-top: 25px;
+}
+
+/* 设置img的尺寸 */
+
+.main-image img{
+	height: 767px;
+	width: 100%;
+}
+
+/* 设置figure元素居中，使得img居中，同时设置最小最大宽度 */
+
+.main-image{
+	display: block;
+	padding: 0 6px;
+	margin: 0 auto;
+	min-width: 936px;
+	max-width: 1412px;
+}
+
+/* 通过改变border-radius将span元素的形状设置成圆，并行内显示 */
+
+.change{
+	margin-top: 8px;
+	width: 100%;
+	height: 40px;
+}
+
+.change span{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 2px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+.change span:hover{
+	background-color: black;
+}
+
+/* 第二个区域的图片布局 */
+
+.second-images{
+	padding: 0 6px;
+	margin: 0 auto;
+	min-width: 936px;
+	max-width: 1412px;
+	height: 800px;
+	display: flex;
+	overflow: hidden;
+	margin-bottom: 90px;
+}
+
+.left{
+	flex: 1;
+	display: inline-flex;
+	align-items: flex-start;
+	flex-direction: column;
+	padding-right: 6px;
+}
+
+.left img{
+	height: 393px;
+}
+
+.right{
+	padding-left: 6px;
+	flex: 1;
+	display: inline-flex;
+}
+
+.left-top{
+	flex: 1;
+	margin-bottom: 12px;
+}
+
+.left-buttom{
+	flex: 1;
+}
+
+.left-top:hover,.left-buttom:hover,.right:hover{
+	opacity: 0.4;
+}
+
+.relative-info{
+	height: 128px;
+	margin: 0 auto;
+	min-width: 936px;
+	max-width: 1412px;
+	display: flex;
+	flex-direction: row;
+}
+
+.left-info{
+	flex: 1;
+}
+
+.right-info{
+	flex: 1;
+}
+
+.gray{
+	color: gray;
+}
+
+.right-buttom{
+	display: block;
+	margin-top: 20px;
+}
+
+/* 设置脚部的内边距为44px以控制内容的定位 */
+
+footer{
+	padding: 0px 60px 60px;
+	background-color: rgb(248, 248, 248);
+}
+
+/* margin居中，最小宽度936px，最大宽度为1424px */
+.footer-border{
+	margin:  0 auto;
+	padding-top: 32px;
+	min-width: 936px;
+	max-width: 1424px;
+	display: flex;
+	border-top: 1px solid #dedee1;
+
+}
+
+.footer-border p{
+	color: #222;
+	margin-bottom: 20px;
+}
+
+/* 设置脚部的文字信息等比例分布 */
+.Social{
+	flex: 1;
+}
+
+.address{
+	flex: 1;
+}
+
+.lin{
+	flex: 1;
+}
+
+.icon{
+	flex: 1;
+}
+
+/* 图标行内排列，右对齐 */
+.icon li{
+	display: inline-block;
+	float: right;
+}
+
+/* 设置图标的尺寸 */
+.icon div{
+	width: 38px;
+	height: 40px;
+}
+
+/* 设置图标的背景 */
+.ins{
+	background-image: url('images/Instagram-icon.png');
+}
+
+.link{
+	background-image: url('images/LinkedIn-icon.png');
+}
+
+.twi{
+	background-image: url('images/Twitter-icon.png');
+}
+
+/* 当鼠标移动到图标上时，更改图标 */
+.ins:hover{
+	background: url('images/Instagram-icon-hover.png');
+}
+
+.link:hover{
+	background: url('images/LinkedIn-icon-hover.png');
+}
+
+.twi:hover{
+	background:url('images/Twitter-icon-hover.png') no-repeat top;
+}
