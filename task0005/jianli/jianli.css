@@ -1,0 +1,129 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: Microsoft YaHei;
+}
+ 
+@media screen and (min-width:480px ){
+	body{
+		background-color: #f8f8f8;
+	}
+
+	article{
+		padding: 40px;
+		width: 800px;
+		margin: 50px auto;
+		background-color: white;
+	}
+
+	header{
+		height: 200px;
+		margin-bottom: 20px;
+	}
+
+	.img{
+		width: 20%;
+		margin-right: 20px;
+	}
+	.img h1,.img p{
+		display: none;
+	}
+
+	.img,.main-info,.school-info{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.tou{
+		width: 100%;
+	}
+
+	.main-info{
+		width: 40%;
+	}
+
+	.school-info{
+		width: 30%;
+	}
+
+	h1{
+		border-bottom: 2px solid black;
+	}
+
+	.main-info h1{
+		border-bottom:none;
+	}
+
+	p{
+		margin: 20px 0;
+	}
+
+	.pingjia{
+		border-top: 1px solid gray;
+		padding-top: 15px;
+	}
+
+	.pingjia p,h2{
+		color: gray;
+		display: inline;
+
+	}
+
+}
+
+@media screen and (max-width: 480px){
+	
+	body{
+	background-color: #f8f8f8;/* 页面背景色 */
+	}
+
+	article{
+		margin: 0px auto;/* 简历内容居中 */
+		padding: 20px; /* 简历内边距为20px */
+		background-color: white;
+	}
+	header{
+		overflow: hidden;
+		display: flex; /* 头部信息为flex弹性布局 */
+	}
+	.school-info{
+		display: none; /* 隐藏school-info */
+	}
+
+	.img{
+		box-sizing: border-box; /* 设置img的宽度计算方式为边距计算 */
+		flex: 3;
+		padding: 10px;
+		background-color: rgb(189, 214, 238);
+	}
+
+	.tou{
+		width: 40%;
+	}
+
+	.img h1{
+		font-size: 10px;
+		float: right;
+	}
+
+	.img p{
+		font-size: 6px;
+		float: right;
+	}
+	.main-info{
+		box-sizing:border-box;
+		flex: 2;
+		background-color: rgb(31, 78, 121);
+		padding: 10px;
+		color: white;
+		font-size: 8px;
+	}
+
+	.main-info h1{
+		display: none;
+	}
+	h2{
+		font-size: 10px;
+		border-bottom: 2px solid gray;
+	}
+}
