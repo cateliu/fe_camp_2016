@@ -1,0 +1,78 @@
+  main img {
+      width: 620px;
+      margin-top: 90px;
+      transition: opacity 1s;
+  }
+  
+  main h1 {
+  	padding-top: 40px;
+      font-weight: 700;
+      text-align: center;
+      height: 30px;
+      font-size: 20px;
+      color: black;
+      letter-spacing: 4px;
+  }
+  
+  main h1:after {
+      display: block;
+      content: "";
+      width: 56px;
+      height: 2px;
+      background-color: black;
+      margin: 10px auto;
+  }
+  
+  .describe {
+      text-align: center;
+      padding-top: 35px;
+      height: 15px;
+      font-family: Microsoft YaHei;
+  }
+  
+  .time {
+      text-align: center;
+      font-family: Microsoft YaHei;
+      font-size: 0.668em;
+      letter-spacing: 0.2em;
+      padding: 25px 0;
+  }
+  
+  .tags {
+      text-align: center;
+      font-style: italic;
+      font-size: 12.8px;
+      line-height: 35px;
+      font-family: Microsoft YaHei;
+  }
+  
+  main img:hover,
+  .tags:hover,
+  main h1:hover {
+      opacity: 0.5;
+  }
+  
+  .article 1 {
+      background-color: gray;
+  }
+  
+
+section p{
+	font-family: microsoft yahei;
+	padding: 10px 10px 0;
+}
+
+  @media screen and (min-width: 700px) {
+      main {
+          padding-top: 150px;
+          margin: 0 auto;
+          width: 620px;
+      }
+  }
+  
+  @media screen and (max-width: 700px) {
+      main {
+          padding: 150px 40px 40px;
+      }
+  }
+

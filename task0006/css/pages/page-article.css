@@ -1,0 +1,108 @@
+@media screen and (min-width: 700px){
+	main{
+		padding: 65px 0px 0px;
+	}
+	h1{
+		padding-top: 100px;
+	}
+	.essay{
+		width: 620px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 700px){
+	main{
+		padding: 65px 60px 0px;
+	}
+	h1{
+
+    padding-top: 170px;
+	}
+}
+h1 {
+    font-weight: 700;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+    color: black;
+    font-family: Microsoft YaHei;
+    letter-spacing: 4px;
+}
+
+h1:after {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    margin: 20px auto 0px;
+}
+
+.describe {
+    height: 30px;
+    font-family: Microsoft YaHei;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.time {
+    text-align: center;
+    font-family: Microsoft YaHei;
+    font-size: 0.668em;
+    letter-spacing: 0.2em;
+    padding-top: 40px;
+}
+
+.tags {
+    text-align: center;
+    font-style: italic;
+    font-size: 12.8px;
+    line-height: 25px;
+    font-family: Microsoft YaHei;
+    padding-top: 15px;
+}
+
+ main section p{
+ 	font-family: microsoft yahei;
+ 	padding: 10px 10px 0px;
+ }
+
+
+ /* archive部分 */
+.year{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 30px;
+    height: 60px;
+    font-family: Microsoft YaHei;
+}
+
+.archive li{
+    display: block;
+}
+
+.data{
+    display: inline-block;
+    width: 100px;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: gray;
+    font-family: Microsoft YaHei;
+}
+
+.archive li a{
+    display: inline-block;
+    /* width: 80%;
+ */    text-align: left;
+    font-family: Microsoft YaHei;
+    padding-left: 40px;
+    padding-top: 20px;
+	box-sizing: border-box;
+}
+
+.archive li a:hover{
+	opacity: 0.5;
+}

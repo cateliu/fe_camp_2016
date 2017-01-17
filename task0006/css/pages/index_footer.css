@@ -1,0 +1,15 @@
+footer p{
+	color: gray;
+	text-align: center;
+	border-top: 1px solid #dcdcdc;
+	line-height: 40px;
+	font-family: Microsoft YaHei;
+	padding: 20px 0;
+	font-size: 13px;
+	margin-top: 50px;
+}
+
+footer p span{
+	border-left: 1px solid gray;
+	padding-left: 5px;
+}

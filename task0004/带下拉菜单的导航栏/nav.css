@@ -5,19 +5,28 @@
 	margin: 0px;
 	font-family: Microsoft YaHei;
 }
+/* 初始化header背景颜色*/
+header{
+	background-color: #333333;
+	
+}
 
+body{
+	min-width: 600px;
+}
 /* 初始化ul背景颜色并设置左内边距为30px */
 
 ul{
-	background-color: #333333;
-	padding-left: 30px;
+	display: block;
+	padding-left: 50px;
 }
 
 /* 设置li元素为行内块元素，一字排开，宽度为150px，高度为40px，内边距为10px */
 
 li{
+	position: relative;
 	display: inline-block;
-	width: 150px;
+	width: 20%;
 	height: 40px;
 	padding: 10px;
 	height: 25px;
@@ -35,20 +44,21 @@ a{
 /* div元素包含了下拉菜单，正常时候不显示。为了不让div影响li元素的排版，定位为absolute，同时设置与li元素相同的字体颜色及背景色 */
 
 div{
-	display: none;
 	position: absolute;
+	display: none;
 	background-color: #333333;
 	color: white;
 	top: 45px;
-	left: 30px;
+	left: 0px;
+	width: 100%;
 }
 
 /* span元素包含菜单内容，以块元素显示，使一个菜单内容占一行，同时设置字体居中 */
 
 div a{
 	display: block;
-	width: 170px;
-	height: 40px;
+	width: 100%;
+	line-height: 40px;
 	text-align: center;
 }
 
