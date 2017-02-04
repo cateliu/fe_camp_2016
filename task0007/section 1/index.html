@@ -12,49 +12,66 @@
     
     form {
         width: 800px;
-        margin: 200px auto;
+        margin: 0px auto;
     }
     
-    input {
+    #input {
         width: 400px;
         padding: 5px 2% 5px;
     }
     
-    button {
+    .button {
         margin-left: 15px;
         padding: 5px 10px 5px;
+    }
+    
+    p {
+        width: 800px;
+        padding: 20px;
+        font-size: 17px;
+        /* 
+        text-align: center; */
+        margin: 100px auto 50px;
+        line-height: 40px;
+    }
+    #txt{
+        color: red;
     }
     </style>
 </head>
 
 <body>
+    <p> 在电商购物网站上经常有购物卡出售，购物卡是一种可以充值的卡片，上面通常有20位密码，为了方便阅读以连字符分隔，例如： 3EFU8-RT67F-E42OP-8RPOL
+        <br>要求：用 JavaScript 实现一个函数，读取用户输入的字符串，替换掉连字符，将小写字 母转换为大写字母，然后判断是否是20位，若是，将转换后的字符串返回，否则抛出格式异 常错误。
+        <br>示例输入： 3efu8-rt67f-e42op-8rpol
+        <br>函数结果：返回：3EFU8RT67FE42OP8RPOL
+        <br>示例输入：hello world
+        <br>函数结果：异常：无效的密码格式
+    </p>
     <form action="">
         <label>请输入卡号：</label>
         <input type="text" name="" id="input">
-        <button onclick="change()">提交</button>
+        <input type="button" onclick="change()" value="提交" class="button">
     </form>
+    <p id="txt"></p>
 </body>
 <script type="text/javascript">
 function change() {
-    var scr = document.getElementById('input');
+    var scr = document.getElementById('input').value;
     var scr_1 = [];
     var j = 0;
-    console.log(scr.value.length);
-    if (scr.value.length != 20)
-        alert("异常：无效的密码格式");
-    else {
-        for (var i = 0; i < scr.value.length; i++) {
-            if (scr.value[i] >= 'A' && scr.value[i] <= 'Z' || !isNaN(scr.value[i]) || scr.value[i] <= 'z' && scr.value[i] >= 'a') {
-                scr_1[j] = scr.value[i];
-                j++;
-            } else if (scr.value[i] == '-') {} else {
-                alert("异常：无效的密码格式");
-                return;
-            }
+    for (var i = 0; i < scr.length; i++) {
+        if (scr[i] >= 'A' && scr[i] <= 'Z' || !isNaN(scr[i]) || scr[i] <= 'z' && scr[i] >= 'a') {
+            scr_1[j] = scr[i];
+            j++;
+        } else if (scr[i] == '-') {} else {
+            document.getElementById('txt').innerHTML = "异常：无效的密码格式";
+            return;
         }
-        alert("返回：" + scr_1.join("").toUpperCase());
-
     }
+    if (scr_1.length != 20)
+        document.getElementById('txt').innerHTML = "异常：无效的密码格式";
+    document.getElementById('txt').innerHTML = "返回：" + scr_1.join("").toUpperCase(); 
 }
 </script>
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>练习 2</title>
+    <style>
+    * {
+        font-size: 20px;
+        font-family: Microsoft YaHei;
+    }
+    
+    form {
+        width: 800px;
+        margin: 0px auto;
+    }
+    
+    #input {
+        width: 400px;
+        padding: 5px 2% 5px;
+    }
+    
+    .button {
+        margin-left: 15px;
+        padding: 5px 10px 5px;
+    }
+    
+    p {
+        width: 800px;
+        padding: 20px;
+        font-size: 17px;
+        /* 
+    	text-align: center; */
+        margin: 100px auto 50px;
+        line-height: 40px;
+    }#txt{
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <p>网站上让用户给出一组兴趣爱好选项，是以半角逗号分割的字符串，例如：'游泳,健身,舞蹈,阅读' 为了确保输入重复的项，要求实现一个函数，对字符串中的兴趣内容进行去重
+        <br>输入示例：​'游泳,健身,篮球,游泳,篮球,阅读'
+        <br>输出：'游泳,健身,篮球,阅读'​​​​​
+    </p>
+    <form action="">
+        <label>按格式输入您的兴趣爱好：</label>
+        <input type="text" name="" id="input">
+        <input type="button" onclick="change()" value="提交" class="button">
+    </form>
+    <p id="txt"></p>
+    <p id="t"></p>
+</body>
+<script type="text/javascript">
+function change() {
+    var da = document.getElementById('input').value.replace("'","").replace("'","").split(",");
+    var par = [];
+    var m = 0;
+    for (var i = 0; i <= da.length - 1; i++) {
+        for (var j = i + 1; j < da.length; j++) {
+            if (da[i] == da[j])
+                break;
+            if (j == da.length - 1) {
+                par[m] = da[i];
+                m++;
+            }
+        }
+        if (i == da.length - 1)
+            par[m] = da[i];
+    }
+    document.getElementById('txt').innerHTML=par;
+}
+</script>
+
+</html>
