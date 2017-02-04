@@ -38,29 +38,21 @@
 function change() {
     var scr = document.getElementById('input');
     var scr_1 = [];
-    var j=0;
+    var j = 0;
     console.log(scr.value.length);
     if (scr.value.length != 20)
         alert("异常：无效的密码格式");
     else {
-        for (var i = 0; i<scr.value.length; i++) {
-            if (scr.value[i] >= 'A' && scr.value[i] <= 'Z' || !isNaN(scr.value[i])||scr.value[i]<='z'&&scr.value[i]>='a' ) {
-            	scr_1[j] = scr.value[i];
-            	j++;
-                }
-            else if(scr.value[i] == '-' ){
-            	// for(var b=i;b<scr.value.length-1;b++){
-            	// 	scr.value[b] = scr.value[b+1];
-            	// 	console.log(scr.value[b]);
-            	// 	console.log(scr.value[b+1]);
-            	// }
-            	console.log(scr.value);
-            } else {
-            	alert("异常：无效的密码格式");
+        for (var i = 0; i < scr.value.length; i++) {
+            if (scr.value[i] >= 'A' && scr.value[i] <= 'Z' || !isNaN(scr.value[i]) || scr.value[i] <= 'z' && scr.value[i] >= 'a') {
+                scr_1[j] = scr.value[i];
+                j++;
+            } else if (scr.value[i] == '-') {} else {
+                alert("异常：无效的密码格式");
                 return;
             }
         }
-            alert("返回："+scr_1.join("").toUpperCase());
+        alert("返回：" + scr_1.join("").toUpperCase());
 
     }
 }
